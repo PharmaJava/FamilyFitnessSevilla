@@ -1,0 +1,21 @@
+{
+  "name": "Family Fitness — Gimnasio familiar en Sevilla",
+  "short_name": "Family Fitness",
+  "description": "Gimnasio familiar en Sevilla con más de 34 años de experiencia. Musculación, clases, entrenamiento personal y rehabilitación.",
+  "lang": "es-ES",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "categories": ["health", "fitness", "sports"],
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

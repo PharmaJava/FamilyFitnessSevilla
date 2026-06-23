@@ -1,0 +1,29 @@
+{
+  "_comment": "Ejemplo de content.json publicado. Sólo necesita las claves que quieras SOBRESCRIBIR sobre los valores por defecto de assets/js/config.js. Los arrays se reemplazan por completo. El panel (admin.html) genera este archivo automáticamente al pulsar 'Publicar en la web'.",
+  "business": {
+    "name": "Family Fitness",
+    "tagline": "Tu gimnasio familiar en Sevilla",
+    "phone": "954 57 92 59",
+    "whatsapp": "34954579259",
+    "rating": 4.7,
+    "reviewCount": 132,
+    "address": "C. Alonso Carrillo, 24, 41007 Sevilla"
+  },
+  "images": {
+    "hero": "assets/img/hero.jpg",
+    "about": "assets/img/about.jpg"
+  },
+  "facilities": {
+    "gallery": [
+      { "src": "assets/img/gallery-1.jpg", "alt": "Sala de máquinas" },
+      { "src": "assets/img/gallery-2.jpg", "alt": "Zona de cardio" },
+      { "src": "assets/img/gallery-3.jpg", "alt": "Sala de clases" }
+    ]
+  },
+  "testimonials": {
+    "items": [
+      { "name": "María L.", "rating": 5, "text": "Ambiente increíble, te tratan como en familia." },
+      { "name": "Javier R.", "rating": 5, "text": "Vine por una rehabilitación y me quedé. Profesionales de verdad." }
+    ]
+  }
+}

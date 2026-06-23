@@ -1,0 +1,8 @@
+# robots.txt — Family Fitness Sevilla
+User-agent: *
+Allow: /
+
+# El panel de administración no debe indexarse
+Disallow: /admin.html
+
+Sitemap: https://familyfitnesssevilla.com/sitemap.xml

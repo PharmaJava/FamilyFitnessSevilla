@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ─────────────────────────  SEO local (Sevilla)  ───────────────────────── -->
+    <title>Family Fitness | Gimnasio familiar en Sevilla (Nervión) · +34 años</title>
+    <meta
+      name="description"
+      content="Gimnasio familiar en Sevilla con más de 34 años de experiencia. Musculación, clases, entrenamiento personal y rehabilitación. Sin permanencia. ¡Hazte socio!"
+    />
+    <meta
+      name="keywords"
+      content="gimnasio en Sevilla, gimnasio familiar Sevilla, Family Fitness Sevilla, entrenamiento personal Sevilla, rehabilitación Sevilla, gimnasio Nervión"
+    />
+    <meta name="author" content="Family Fitness" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://familyfitnesssevilla.com/" />
+    <link rel="alternate" hreflang="es-ES" href="https://familyfitnesssevilla.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://familyfitnesssevilla.com/" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Geo / local -->
+    <meta name="geo.region" content="ES-SE" />
+    <meta name="geo.placename" content="Sevilla" />
+    <meta name="geo.position" content="37.38826;-5.97075" />
+    <meta name="ICBM" content="37.38826, -5.97075" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:site_name" content="Family Fitness" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Family Fitness | Tu gimnasio familiar en Sevilla" />
+    <meta
+      property="og:description"
+      content="+34 años cuidando tu salud en Sevilla. Musculación, clases, entrenamiento personal y rehabilitación. Sin permanencia."
+    />
+    <meta property="og:url" content="https://familyfitnesssevilla.com/" />
+    <meta property="og:image" content="https://familyfitnesssevilla.com/assets/og-image.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Family Fitness | Tu gimnasio familiar en Sevilla" />
+    <meta
+      name="twitter:description"
+      content="+34 años cuidando tu salud en Sevilla. Sin permanencia. ¡Hazte socio!"
+    />
+    <meta name="twitter:image" content="https://familyfitnesssevilla.com/assets/og-image.svg" />
+
+    <!-- PWA / iconos -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/icons/favicon.svg" />
+    <link rel="mask-icon" href="assets/icons/favicon.svg" color="#a3e635" />
+
+    <!-- ─────────────────────────  Rendimiento  ───────────────────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <!-- Preload del hero para mejorar el LCP -->
+    <link rel="preload" as="image" href="assets/img/hero.svg" type="image/svg+xml" fetchpriority="high" />
+
+    <!-- Tipografías (display deportiva + texto legible), con swap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind por CDN + configuración externalizada (sin paso de build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+
+    <!-- Estilos del sitio -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- JSON-LD se inyecta dinámicamente desde el contenido (main.js) -->
+  </head>
+
+  <body class="bg-brand-bg text-brand-white">
+    <!-- Saltar al contenido (accesibilidad) -->
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+    <!-- ════════════════════════════  NAVBAR  ════════════════════════════ -->
+    <header class="navbar" id="navbar">
+      <nav class="container-x h-full flex items-center justify-between" aria-label="Principal">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2.5" aria-label="Family Fitness — inicio">
+          <img src="assets/icons/logo.svg" alt="" width="34" height="34" class="w-9 h-9" />
+          <span class="font-display text-xl tracking-wide leading-none">
+            FAMILY<span class="text-brand-lime">FITNESS</span>
+          </span>
+        </a>
+
+        <!-- Enlaces (escritorio) -->
+        <ul class="hidden lg:flex items-center gap-7" id="nav-links">
+          <li><a href="#sobre-nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#instalaciones" class="nav-link">Instalaciones</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#testimonios" class="nav-link">Opiniones</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <!-- CTA + estado + hamburguesa -->
+        <div class="flex items-center gap-3">
+          <span class="badge-open hidden md:inline-flex" data-open-badge aria-live="polite">
+            <span class="dot"></span><span data-open-text>Comprobando…</span>
+          </span>
+          <a href="#contacto" class="btn btn-primary btn-sheen hidden sm:inline-flex !py-2.5 !px-5">Hazte Socio</a>
+          <button
+            id="hamburger"
+            class="hamburger lg:hidden flex flex-col gap-1.5 p-2"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Menú móvil -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu fixed inset-y-0 right-0 z-50 w-[82%] max-w-sm bg-brand-coal border-l border-white/10 p-7 pt-24 lg:hidden"
+      aria-hidden="true"
+    >
+      <ul class="flex flex-col gap-5 text-lg font-heading uppercase tracking-wide">
+        <li><a href="#sobre-nosotros" class="mobile-link block">Nosotros</a></li>
+        <li><a href="#instalaciones" class="mobile-link block">Instalaciones</a></li>
+        <li><a href="#servicios" class="mobile-link block">Servicios</a></li>
+        <li><a href="#testimonios" class="mobile-link block">Opiniones</a></li>
+        <li><a href="#faq" class="mobile-link block">FAQ</a></li>
+        <li><a href="#contacto" class="mobile-link block">Contacto</a></li>
+      </ul>
+      <div class="mt-8 flex flex-col gap-3">
+        <a href="#contacto" class="btn btn-primary btn-sheen mobile-link">Hazte Socio</a>
+        <a class="btn btn-ghost" data-tel href="#">Llamar 954 57 92 59</a>
+      </div>
+      <p class="mt-8 text-sm text-brand-muted" data-text="business.address"></p>
+    </div>
+    <!-- Capa oscura tras el menú -->
+    <div id="menu-backdrop" class="fixed inset-0 z-40 bg-black/60 opacity-0 pointer-events-none transition-opacity lg:hidden"></div>
+
+    <main id="contenido">
+      <!-- ════════════════════════════  HERO  ════════════════════════════ -->
+      <section id="hero" class="hero">
+        <div class="hero__bg" data-bg="images.hero" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="hero__content container-x py-28 lg:py-0">
+          <div class="max-w-3xl reveal">
+            <span class="badge-open is-loading mb-5" data-open-badge aria-live="polite">
+              <span class="dot"></span><span data-open-text>Comprobando horario…</span>
+            </span>
+
+            <!-- H1 con keyword local accesible -->
+            <h1 class="text-brand-white drop-shadow-2xl">
+              Family Fitness
+              <span class="block text-gradient">Tu gimnasio familiar en Sevilla</span>
+              <span class="sr-only">Gimnasio en Sevilla, Nervión — entrenamiento personal y rehabilitación</span>
+            </h1>
+
+            <p class="mt-6 text-lg sm:text-xl text-gray-200 max-w-2xl" data-text="hero.subtitle"></p>
+
+            <!-- Rating -->
+            <div class="mt-6 flex items-center gap-3">
+              <span class="stars text-xl" aria-hidden="true">★★★★★</span>
+              <span class="text-gray-200">
+                <strong class="text-brand-white" data-text="business.rating"></strong>/5 ·
+                <span data-text="business.reviewCount"></span>+ opiniones en Google
+              </span>
+            </div>
+
+            <!-- CTAs principales -->
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href="#contacto" class="btn btn-primary btn-sheen">Hazte Socio</a>
+              <a href="#servicios" class="btn btn-ghost">Ver Clases y Horarios</a>
+              <a href="#contacto" class="btn btn-orange btn-sheen">Reservar Entrenamiento Personal</a>
+            </div>
+
+            <!-- Accesos rápidos -->
+            <div class="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-gray-300">
+              <a data-directions class="inline-flex items-center gap-2 hover:text-brand-lime transition" href="#">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path d="M12 21s-7-6.7-7-11a7 7 0 1 1 14 0c0 4.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                Cómo llegar
+              </a>
+              <a data-whatsapp class="inline-flex items-center gap-2 hover:text-brand-lime transition" href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.512 5.26l-.999 3.648 3.985-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                WhatsApp
+              </a>
+              <a data-tel class="inline-flex items-center gap-2 hover:text-brand-lime transition" href="#">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                <span data-text="business.phone"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════  BANDA DE CIFRAS  ═══════════════════════ -->
+      <section class="bg-brand-coal border-y border-white/10">
+        <div class="container-x py-10">
+          <div id="stats-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            <!-- Inyectado por main.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════  SOBRE NOSOTROS  ════════════════════════ -->
+      <section id="sobre-nosotros" class="py-20 lg:py-28">
+        <div class="container-x grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="reveal">
+            <span class="section-label">Sobre nosotros</span>
+            <h2 class="mt-4 text-4xl sm:text-5xl" data-text="about.title"></h2>
+            <p class="mt-5 text-lg text-gray-300" data-text="about.lead"></p>
+            <div id="about-paragraphs" class="mt-4 space-y-4 text-brand-muted leading-relaxed"></div>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#contacto" class="btn btn-primary btn-sheen">Hazte Socio</a>
+              <a data-whatsapp href="#" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sheen">Escríbenos por WhatsApp</a>
+            </div>
+          </div>
+          <div class="reveal" style="--i: 1">
+            <div class="relative">
+              <img
+                data-src="images.about"
+                alt="Equipo y ambiente familiar de Family Fitness Sevilla"
+                width="720"
+                height="560"
+                loading="lazy"
+                decoding="async"
+                class="img-fade w-full rounded-2xl border border-white/10 object-cover aspect-[5/4]"
+              />
+              <div class="absolute -bottom-5 -left-5 card px-6 py-4 hidden sm:block">
+                <p class="font-display text-4xl text-brand-lime leading-none">+34</p>
+                <p class="text-sm text-brand-muted mt-1">años en Sevilla</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valores -->
+        <div class="container-x mt-16">
+          <div id="values-grid" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5"></div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════  INSTALACIONES  ═════════════════════════ -->
+      <section id="instalaciones" class="py-20 lg:py-28 bg-brand-coal border-y border-white/10">
+        <div class="container-x">
+          <div class="reveal max-w-2xl">
+            <span class="section-label">Instalaciones</span>
+            <h2 class="mt-4 text-4xl sm:text-5xl" data-text="facilities.title"></h2>
+            <p class="mt-4 text-lg text-brand-muted" data-text="facilities.subtitle"></p>
+          </div>
+          <div id="gallery-grid" class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5"></div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════  SERVICIOS  ═════════════════════════ -->
+      <section id="servicios" class="py-20 lg:py-28">
+        <div class="container-x">
+          <div class="reveal max-w-2xl">
+            <span class="section-label">Servicios</span>
+            <h2 class="mt-4 text-4xl sm:text-5xl" data-text="services.title"></h2>
+            <p class="mt-4 text-lg text-brand-muted" data-text="services.subtitle"></p>
+          </div>
+          <div id="services-grid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════  POR QUÉ ELEGIRNOS  ═════════════════════ -->
+      <section id="por-que" class="py-20 lg:py-28 bg-brand-coal border-y border-white/10">
+        <div class="container-x">
+          <div class="reveal max-w-2xl">
+            <span class="section-label">Por qué elegirnos</span>
+            <h2 class="mt-4 text-4xl sm:text-5xl" data-text="why.title"></h2>
+            <p class="mt-4 text-lg text-brand-muted" data-text="why.subtitle"></p>
+          </div>
+          <div id="why-grid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════  TESTIMONIOS  ═══════════════════════ -->
+      <section id="testimonios" class="py-20 lg:py-28">
+        <div class="container-x">
+          <div class="reveal max-w-2xl">
+            <span class="section-label">Opiniones</span>
+            <h2 class="mt-4 text-4xl sm:text-5xl" data-text="testimonials.title"></h2>
+            <p class="mt-4 text-lg text-brand-muted" data-text="testimonials.subtitle"></p>
+          </div>
+          <div id="testimonials-grid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+          <div class="mt-10 text-center reveal">
+            <a data-href="testimonials.googleUrl" href="#" target="_blank" rel="noopener" class="btn btn-ghost">
+              Ver todas las opiniones en Google
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════  FAQ  ═══════════════════════════ -->
+      <section id="faq" class="py-20 lg:py-28 bg-brand-coal border-y border-white/10">
+        <div class="container-x max-w-3xl">
+          <div class="reveal text-center">
+            <span class="section-label justify-center">FAQ</span>
+            <h2 class="mt-4 text-4xl sm:text-5xl" data-text="faq.title"></h2>
+            <p class="mt-4 text-lg text-brand-muted" data-text="faq.subtitle"></p>
+          </div>
+          <div id="faq-list" class="mt-12 space-y-4"></div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════  UBICACIÓN Y CONTACTO  ══════════════════ -->
+      <section id="contacto" class="py-20 lg:py-28">
+        <div class="container-x">
+          <div class="reveal max-w-2xl">
+            <span class="section-label">Contacto</span>
+            <h2 class="mt-4 text-4xl sm:text-5xl" data-text="contact.title"></h2>
+            <p class="mt-4 text-lg text-brand-muted" data-text="contact.subtitle"></p>
+          </div>
+
+          <div class="mt-12 grid lg:grid-cols-2 gap-8 items-start">
+            <!-- Mapa -->
+            <div class="reveal map-frame">
+              <iframe
+                id="map-embed"
+                title="Ubicación de Family Fitness en Sevilla"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <!-- Datos + formulario -->
+            <div class="reveal" style="--i: 1">
+              <address class="not-italic space-y-5">
+                <div class="flex items-start gap-4">
+                  <span class="icon-chip shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.7-7-11a7 7 0 1 1 14 0c0 4.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+                  <div>
+                    <p class="font-heading uppercase tracking-wide text-sm text-brand-muted">Dirección</p>
+                    <p class="text-lg" data-text="business.address"></p>
+                    <a data-directions href="#" class="text-brand-lime text-sm hover:underline">Cómo llegar →</a>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="icon-chip shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+                  <div>
+                    <p class="font-heading uppercase tracking-wide text-sm text-brand-muted">Teléfono</p>
+                    <a data-tel href="#" class="text-lg hover:text-brand-lime transition" data-text="business.phone"></a>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="icon-chip shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                  <div class="w-full">
+                    <p class="font-heading uppercase tracking-wide text-sm text-brand-muted flex items-center gap-3">
+                      Horario
+                      <span class="badge-open" data-open-badge><span class="dot"></span><span data-open-text></span></span>
+                    </p>
+                    <ul id="schedule-list" class="mt-1 text-gray-300 space-y-1"></ul>
+                  </div>
+                </div>
+              </address>
+
+              <div class="mt-7 flex flex-wrap gap-3">
+                <a data-whatsapp href="#" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sheen">WhatsApp</a>
+                <a data-tel href="#" class="btn btn-ghost">Llamar</a>
+                <a data-directions href="#" class="btn btn-orange btn-sheen">Cómo llegar</a>
+              </div>
+
+              <!-- Formulario opcional (se muestra/oculta según config.contact.form) -->
+              <form id="contact-form" class="mt-9 hidden space-y-4" novalidate>
+                <p class="font-heading uppercase tracking-wide text-sm text-brand-muted">¿Prefieres que te llamemos?</p>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <label class="block">
+                    <span class="sr-only">Nombre</span>
+                    <input name="nombre" type="text" required placeholder="Nombre" class="w-full rounded-xl bg-brand-card border border-white/10 px-4 py-3 text-white placeholder:text-gray-500 focus:border-brand-lime outline-none" />
+                  </label>
+                  <label class="block">
+                    <span class="sr-only">Teléfono</span>
+                    <input name="telefono" type="tel" required placeholder="Teléfono" class="w-full rounded-xl bg-brand-card border border-white/10 px-4 py-3 text-white placeholder:text-gray-500 focus:border-brand-lime outline-none" />
+                  </label>
+                </div>
+                <label class="block">
+                  <span class="sr-only">Mensaje</span>
+                  <textarea name="mensaje" rows="3" placeholder="¿En qué podemos ayudarte?" class="w-full rounded-xl bg-brand-card border border-white/10 px-4 py-3 text-white placeholder:text-gray-500 focus:border-brand-lime outline-none"></textarea>
+                </label>
+                <button type="submit" class="btn btn-primary btn-sheen w-full sm:w-auto">Enviar</button>
+                <p id="form-status" class="text-sm" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ════════════════════════════════  FOOTER  ════════════════════════ -->
+    <footer class="bg-brand-coal border-t border-white/10 pt-14 pb-10">
+      <div class="container-x grid md:grid-cols-3 gap-10">
+        <div>
+          <a href="#hero" class="flex items-center gap-2.5">
+            <img src="assets/icons/logo.svg" alt="" width="34" height="34" class="w-9 h-9" />
+            <span class="font-display text-xl tracking-wide">FAMILY<span class="text-brand-lime">FITNESS</span></span>
+          </a>
+          <p class="mt-4 text-brand-muted max-w-xs" data-text="footer.tagline"></p>
+          <a data-href="business.instagram" href="#" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 footer-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.62c-3.15 0-3.52.01-4.76.07-.99.04-1.53.21-1.89.35-.47.18-.81.4-1.17.76-.36.36-.58.7-.76 1.17-.14.36-.31.9-.35 1.89-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.99.21 1.53.35 1.89.18.47.4.81.76 1.17.36.36.7.58 1.17.76.36.14.9.31 1.89.35 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.99-.04 1.53-.21 1.89-.35.47-.18.81-.4 1.17-.76.36-.36.58-.7.76-1.17.14-.36.31-.9.35-1.89.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.99-.21-1.53-.35-1.89a3.15 3.15 0 0 0-.76-1.17 3.15 3.15 0 0 0-1.17-.76c-.36-.14-.9-.31-1.89-.35-1.24-.06-1.61-.07-4.76-.07Zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92Zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08Zm6.95-9.22a1.27 1.27 0 1 1-2.55 0 1.27 1.27 0 0 1 2.55 0Z"/></svg>
+            <span data-text="business.instagramHandle"></span>
+          </a>
+        </div>
+
+        <nav class="md:justify-self-center" aria-label="Pie de página">
+          <p class="font-heading uppercase tracking-wide text-sm text-brand-muted mb-4">Navegación</p>
+          <ul id="footer-nav" class="space-y-2.5"></ul>
+        </nav>
+
+        <div>
+          <p class="font-heading uppercase tracking-wide text-sm text-brand-muted mb-4">Visítanos</p>
+          <p class="text-gray-300" data-text="business.address"></p>
+          <a data-tel href="#" class="block mt-2 text-gray-300 hover:text-brand-lime transition" data-text="business.phone"></a>
+          <ul id="footer-schedule" class="mt-4 text-sm text-brand-muted space-y-1"></ul>
+        </div>
+      </div>
+
+      <div class="container-x mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-sm text-brand-muted">
+          © <span id="year"></span> Family Fitness · Tu gimnasio familiar en Sevilla
+        </p>
+        <a href="admin.html" class="admin-link" rel="nofollow">Acceso</a>
+      </div>
+    </footer>
+
+    <!-- ════════════  Barra de acción inferior (móvil)  ════════════ -->
+    <nav class="action-bar lg:hidden" aria-label="Acciones rápidas">
+      <a data-tel href="#" class="call">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Llamar
+      </a>
+      <a data-whatsapp href="#" target="_blank" rel="noopener" class="wa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.512 5.26l-.999 3.648 3.985-1.607z"/></svg>
+        WhatsApp
+      </a>
+      <a href="#contacto" class="join">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        Hazte Socio
+      </a>
+    </nav>
+
+    <!-- ════════════  Botones flotantes (escritorio)  ════════════ -->
+    <div class="fab-stack">
+      <a data-whatsapp href="#" target="_blank" rel="noopener" class="fab fab-wa" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.512 5.26l-.999 3.648 3.985-1.607z"/></svg>
+        WhatsApp
+      </a>
+      <a href="#contacto" class="fab fab-join">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+        Hazte Socio
+      </a>
+    </div>
+
+    <!-- ════════════════════════════════  SCRIPTS  ═══════════════════════ -->
+    <script defer src="assets/js/config.js"></script>
+    <script defer src="assets/js/store.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </body>
+</html>
