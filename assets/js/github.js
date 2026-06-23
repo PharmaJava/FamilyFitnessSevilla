@@ -44,7 +44,8 @@
 
   function defaults() {
     var g = (window.FF_CONFIG && window.FF_CONFIG.github) || {};
-    return { owner: g.owner || '', repo: g.repo || '', branch: g.branch || 'main', token: '' };
+    // El token puede venir pre-configurado en config.js (repo privado).
+    return { owner: g.owner || '', repo: g.repo || '', branch: g.branch || 'main', token: g.token || '' };
   }
 
   function getSettings() {
@@ -54,7 +55,8 @@
       owner: saved.owner || d.owner,
       repo: saved.repo || d.repo,
       branch: saved.branch || d.branch,
-      token: saved.token || '',
+      // Prioriza el token guardado en el navegador; si no, usa el de config.js.
+      token: saved.token || d.token,
     };
   }
 
