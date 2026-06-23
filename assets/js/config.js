@@ -207,9 +207,9 @@ window.FF_CONFIG = {
 
   /* ───────────────────  Configuración del panel / GitHub  ──────────────── */
   admin: {
-    // SHA-256 del código de acceso por defecto ("familyfitness").
+    // SHA-256 del código de acceso por defecto ("@Family123!").
     // Cambiable desde el propio panel (se guarda un nuevo hash en localStorage).
-    accessHash: '29b6259ffd07bdcdd2640692f36adda178433a2265d70736afbf572cf65ff299',
+    accessHash: 'f1ef8f98b546c222cabc8811104ea3c3d6a18deafa6a2be83774bd406366030a',
   },
   github: {
     owner: 'PharmaJava',

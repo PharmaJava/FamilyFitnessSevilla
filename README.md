@@ -91,7 +91,7 @@ Cuando el panel publica cambios, el hosting **redespliega solo** y los cambios q
 
 Acceso discreto desde el enlace **"Acceso"** del footer.
 
-- **Código por defecto:** `familyfitness`
+- **Código por defecto:** `@Family123!`
   - Se valida con **SHA-256** (`crypto.subtle`); el hash por defecto está en `config.js → admin.accessHash`.
   - Cámbialo desde el propio panel (sección **🔒 Código de acceso**). El nuevo hash se guarda en tu navegador.
   - La sesión se guarda en `sessionStorage` (se cierra con **Salir** o al cerrar el navegador).
