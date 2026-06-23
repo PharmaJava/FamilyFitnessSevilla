@@ -5,12 +5,13 @@
  * Tailwind se carga por CDN en index.html / admin.html y lee este objeto
  * a través de `window.tailwind.config`.
  *
- * Paleta de marca:
+ * Paleta de marca (turquesa/teal, según identidad real del gimnasio):
  *   - bg      #0a0a0a  → fondo negro
  *   - coal    #141414  → carbón (secciones)
  *   - card    #1f1f1f  → gris oscuro de tarjetas
- *   - lime    #a3e635  → acento verde lima energético (color principal)
- *   - orange  #f97316  → toque secundario (energía / detalles)
+ *   - lime    #34c2ab  → acento turquesa/teal (color principal de marca)
+ *   - orange  #0e9e8a  → teal profundo (acento secundario)
+ *   - grey    #9aa0a3  → gris de marca (del logo)
  *   - white   #ffffff
  */
 window.tailwind = window.tailwind || {};
@@ -25,9 +26,10 @@ window.tailwind.config = {
           bg: '#0a0a0a',
           coal: '#141414',
           card: '#1f1f1f',
-          lime: '#a3e635',
-          'lime-dark': '#84cc16',
-          orange: '#f97316',
+          lime: '#34c2ab',
+          'lime-dark': '#1fa890',
+          orange: '#0e9e8a',
+          grey: '#9aa0a3',
           white: '#ffffff',
           muted: '#9ca3af',
         },
@@ -42,7 +44,7 @@ window.tailwind.config = {
         xl2: '1.25rem',
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(163,230,53,.25), 0 12px 40px -12px rgba(163,230,53,.35)',
+        glow: '0 0 0 1px rgba(52,194,171,.25), 0 12px 40px -12px rgba(52,194,171,.35)',
         card: '0 10px 30px -12px rgba(0,0,0,.6)',
       },
       maxWidth: {

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Family Fitness">
   <rect width="64" height="64" rx="16" fill="#0a0a0a"/>
-  <g stroke="#a3e635" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20 21v22M13 26v12M44 21v22M51 26v12M20 32h24"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 26v12M51 26v12" stroke="#9aa0a3" stroke-width="4"/>
+    <path d="M20 21v22M44 21v22M20 32h24" stroke="#34c2ab" stroke-width="4.4"/>
   </g>
 </svg>

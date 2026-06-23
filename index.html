@@ -55,7 +55,7 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
     <link rel="apple-touch-icon" href="assets/icons/favicon.svg" />
-    <link rel="mask-icon" href="assets/icons/favicon.svg" color="#a3e635" />
+    <link rel="mask-icon" href="assets/icons/favicon.svg" color="#34c2ab" />
 
     <!-- ─────────────────────────  Rendimiento  ───────────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -154,11 +154,15 @@
         <div class="hero__bg" data-bg="images.hero" aria-hidden="true"></div>
         <div class="hero__overlay" aria-hidden="true"></div>
 
-        <div class="hero__content container-x py-28 lg:py-0">
+        <div class="hero__content container-x py-12">
           <div class="max-w-3xl reveal">
-            <span class="badge-open is-loading mb-5" data-open-badge aria-live="polite">
-              <span class="dot"></span><span data-open-text>Comprobando horario…</span>
-            </span>
+            <div class="flex flex-wrap items-center gap-2.5 mb-5">
+              <span class="badge-open is-loading" data-open-badge aria-live="polite">
+                <span class="dot"></span><span data-open-text>Comprobando horario…</span>
+              </span>
+              <!-- Oferta destacada: Matrícula 0€ -->
+              <a href="#promo" class="promo-pill" data-promo-pill>🎉 Matrícula 0€ · oferta de por vida</a>
+            </div>
 
             <!-- H1 con keyword local accesible -->
             <h1 class="text-brand-white drop-shadow-2xl">
@@ -210,6 +214,24 @@
           <div id="stats-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             <!-- Inyectado por main.js -->
           </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════  OFERTA: MATRÍCULA 0€  ══════════════════ -->
+      <section id="promo" class="promo-band reveal" hidden>
+        <div class="container-x py-12 lg:py-14 grid lg:grid-cols-[auto_1fr_auto] items-center gap-6 lg:gap-10">
+          <div class="flex items-end gap-2">
+            <span class="promo-amount" data-text="promo.amount">0€</span>
+            <span class="promo-badge" data-text="promo.badge">Oferta de por vida</span>
+          </div>
+          <div>
+            <h2 class="promo-title font-display" data-text="promo.title">por tu matrícula</h2>
+            <p class="promo-text" data-text="promo.text"></p>
+          </div>
+          <a class="btn btn-dark btn-sheen shrink-0" data-href="promo.cta.href" href="#contacto">
+            <span data-text="promo.cta.label">¡Apúntate ya!</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-5 h-5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
       </section>
 
@@ -272,6 +294,21 @@
             <p class="mt-4 text-lg text-brand-muted" data-text="services.subtitle"></p>
           </div>
           <div id="services-grid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+      </section>
+
+      <!-- ════════════════════  CLASES COLECTIVAS (HORARIO)  ═══════════════ -->
+      <section id="clases" class="py-20 lg:py-28 bg-brand-coal border-y border-white/10">
+        <div class="container-x">
+          <div class="reveal max-w-2xl">
+            <span class="section-label" data-text="classes.label">Clases colectivas</span>
+            <h2 class="mt-4 text-4xl sm:text-5xl" data-text="classes.title"></h2>
+            <p class="mt-4 text-lg text-brand-muted" data-text="classes.subtitle"></p>
+          </div>
+          <div id="classes-grid" class="mt-12 grid md:grid-cols-3 gap-5"></div>
+          <div class="mt-8 reveal">
+            <a data-whatsapp href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sheen">Reserva tu plaza</a>
+          </div>
         </div>
       </section>
 
@@ -372,27 +409,6 @@
                 <a data-tel href="#" class="btn btn-ghost">Llamar</a>
                 <a data-directions href="#" class="btn btn-orange btn-sheen">Cómo llegar</a>
               </div>
-
-              <!-- Formulario opcional (se muestra/oculta según config.contact.form) -->
-              <form id="contact-form" class="mt-9 hidden space-y-4" novalidate>
-                <p class="font-heading uppercase tracking-wide text-sm text-brand-muted">¿Prefieres que te llamemos?</p>
-                <div class="grid sm:grid-cols-2 gap-4">
-                  <label class="block">
-                    <span class="sr-only">Nombre</span>
-                    <input name="nombre" type="text" required placeholder="Nombre" class="w-full rounded-xl bg-brand-card border border-white/10 px-4 py-3 text-white placeholder:text-gray-500 focus:border-brand-lime outline-none" />
-                  </label>
-                  <label class="block">
-                    <span class="sr-only">Teléfono</span>
-                    <input name="telefono" type="tel" required placeholder="Teléfono" class="w-full rounded-xl bg-brand-card border border-white/10 px-4 py-3 text-white placeholder:text-gray-500 focus:border-brand-lime outline-none" />
-                  </label>
-                </div>
-                <label class="block">
-                  <span class="sr-only">Mensaje</span>
-                  <textarea name="mensaje" rows="3" placeholder="¿En qué podemos ayudarte?" class="w-full rounded-xl bg-brand-card border border-white/10 px-4 py-3 text-white placeholder:text-gray-500 focus:border-brand-lime outline-none"></textarea>
-                </label>
-                <button type="submit" class="btn btn-primary btn-sheen w-full sm:w-auto">Enviar</button>
-                <p id="form-status" class="text-sm" role="status" aria-live="polite"></p>
-              </form>
             </div>
           </div>
         </div>

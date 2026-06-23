@@ -8,7 +8,7 @@ Web moderna, enérgica y 100% responsive para **Family Fitness** (Gym Family Fit
 
 ## ✨ Características
 
-- **Single-page** con hero a pantalla completa, banda de cifras (count-up), sobre nosotros, instalaciones, servicios, por qué elegirnos, testimonios, FAQ, ubicación y contacto.
+- **Single-page** con hero a pantalla completa, banda de cifras (count-up), oferta destacada **Matrícula 0€**, sobre nosotros, instalaciones, servicios, **horario de clases colectivas**, por qué elegirnos, testimonios, FAQ, ubicación y contacto.
 - **Contenido editable** sin tocar código desde `admin.html`.
 - **Indicador "Abierto ahora / Cerrado · abre…"** calculado en vivo desde el horario.
 - **SEO local a tope** para Sevilla: meta tags, geo, Open Graph/Twitter, `JSON-LD` (`HealthClub`, `WebSite`, `BreadcrumbList`, `FAQPage`), `robots.txt`, `sitemap.xml` y `site.webmanifest`.
@@ -91,7 +91,7 @@ Cuando el panel publica cambios, el hosting **redespliega solo** y los cambios q
 
 Acceso discreto desde el enlace **"Acceso"** del footer.
 
-- **Código por defecto:** `familyfitness`
+- **Código por defecto:** `@Family123!`
   - Se valida con **SHA-256** (`crypto.subtle`); el hash por defecto está en `config.js → admin.accessHash`.
   - Cámbialo desde el propio panel (sección **🔒 Código de acceso**). El nuevo hash se guarda en tu navegador.
   - La sesión se guarda en `sessionStorage` (se cierra con **Salir** o al cerrar el navegador).
@@ -155,7 +155,7 @@ Puedes hacerlo desde el **panel** (hero, about y galería) o subiendo los archiv
 
 ## 🎨 Marca
 
-- **Paleta**: negro `#0a0a0a`, carbón `#141414`, tarjeta `#1f1f1f`, **verde lima `#a3e635`** (principal), naranja `#f97316` (secundario), blanco `#ffffff`.
+- **Paleta** (identidad real del gimnasio): negro `#0a0a0a`, carbón `#141414`, tarjeta `#1f1f1f`, **turquesa/teal `#34c2ab`** (principal), teal profundo `#0e9e8a` (secundario), gris `#9aa0a3`, blanco `#ffffff`.
 - **Tipografías**: `Anton`/`Oswald` (titulares deportivos) + `Inter` (texto), con `font-display: swap`.
 
 Edita los tokens en `assets/js/tailwind.config.js` y `assets/css/main.css` (variables `:root`).
