@@ -264,5 +264,14 @@ window.FF_CONFIG = {
     branch: 'main',
     contentPath: 'data/content.json',
     imgDir: 'assets/img',
+    // ⚠️ TOKEN PRE-CONFIGURADO (a petición del propietario).
+    // El repositorio es PRIVADO, por eso el token se deja aquí para no tener
+    // que pegarlo cada vez. SEGURIDAD: un repo privado protege el código, pero
+    // si algún día sirves esta web en una URL PÚBLICA (GitHub Pages público,
+    // Netlify, Vercel…), este token quedaría visible para cualquier visitante
+    // desde las DevTools del navegador. Mantén el repo privado, usa un token
+    // con permiso mínimo (Contents: Read and write, solo este repo) y rótalo
+    // si lo expones. El panel puede sobrescribirlo desde el navegador.
+    token: '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',
   },
 };
