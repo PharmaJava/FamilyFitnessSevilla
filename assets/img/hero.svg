@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="FAMILY FITNESS">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f0f0f"/>
+      <stop offset="1" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="25%" r="70%">
+      <stop offset="0" stop-color="#a3e635" stop-opacity="0.20"/>
+      <stop offset="0.5" stop-color="#f97316" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g transform="translate(580,270) scale(17.77777777777778)" stroke="#a3e635" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14M3 8v8M18 5v14M21 8v8M6 12h12"/></g>
+  <text x="50%" y="558" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="113" fill="#ffffff" letter-spacing="1">FAMILY FITNESS</text>
+  <text x="50%" y="648" text-anchor="middle" font-family="Oswald, sans-serif" font-size="38" fill="#a3e635" letter-spacing="3">TU GIMNASIO FAMILIAR EN SEVILLA</text>
+</svg>

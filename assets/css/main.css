@@ -1,0 +1,672 @@
+/* ==========================================================================
+   main.css — Tokens, animaciones y componentes de Family Fitness
+   --------------------------------------------------------------------------
+   Tailwind (CDN) cubre la mayoría de utilidades. Aquí definimos:
+     · Variables CSS de marca (espejo de tailwind.config.js)
+     · Tipografías y base
+     · Animaciones premium (reveal, count-up, sheen, etc.)
+     · Componentes (botones, tarjetas, navbar, barra móvil, etc.)
+     · Accesibilidad y reduced-motion
+   ========================================================================== */
+
+/* ───────────────────────────  Tokens de marca  ─────────────────────────── */
+:root {
+  --bg: #0a0a0a;
+  --coal: #141414;
+  --card: #1f1f1f;
+  --lime: #a3e635;
+  --lime-dark: #84cc16;
+  --orange: #f97316;
+  --white: #ffffff;
+  --muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.08);
+  --navbar-h: 72px;
+}
+
+/* ───────────────────────────────  Base  ───────────────────────────────── */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Anton', 'Oswald', Impact, sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 0.98;
+}
+
+.font-heading {
+  font-family: 'Oswald', 'Anton', sans-serif;
+}
+
+/* Anclas: que no queden ocultas bajo la navbar fija */
+[id] {
+  scroll-margin-top: calc(var(--navbar-h) + 16px);
+}
+
+/* Selección de texto */
+::selection {
+  background: var(--lime);
+  color: #0a0a0a;
+}
+
+/* Scrollbar sutil */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lime-dark);
+}
+
+/* ───────────────────────────  Accesibilidad  ──────────────────────────── */
+
+/* Enlace "saltar al contenido" */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--lime);
+  color: #0a0a0a;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.75rem 0;
+  font-weight: 700;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Sólo lectores de pantalla (para keyword local en H1 sin romper diseño) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Foco coherente y visible */
+:focus-visible {
+  outline: 3px solid var(--lime);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ───────────────────────────  Utilidades  ─────────────────────────────── */
+.container-x {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--lime), var(--orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lime);
+}
+.section-label::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--lime);
+  display: inline-block;
+}
+
+.divider-glow {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(163, 230, 53, 0.5), transparent);
+}
+
+/* ───────────────────────────────  Botones  ────────────────────────────── */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.18s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+  overflow: hidden;
+  will-change: transform;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: #0a0a0a;
+  box-shadow: 0 10px 30px -10px rgba(163, 230, 53, 0.6);
+}
+.btn-primary:hover {
+  background: #b6f24d;
+  box-shadow: 0 14px 38px -10px rgba(163, 230, 53, 0.7);
+}
+
+.btn-orange {
+  background: var(--orange);
+  color: #0a0a0a;
+  box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.55);
+}
+.btn-orange:hover {
+  background: #fb8a3c;
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--white);
+  border-color: var(--border);
+  backdrop-filter: blur(6px);
+}
+.btn-ghost:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #0a0a0a;
+}
+.btn-whatsapp:hover {
+  background: #2eea73;
+}
+
+/* Brillo deslizante (sheen) */
+.btn-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn-sheen:hover::after {
+  left: 130%;
+}
+
+/* ────────────────────────────────  Navbar  ────────────────────────────── */
+.navbar {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 50;
+  height: var(--navbar-h);
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.8);
+}
+
+.nav-link {
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #d1d5db;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--lime);
+  transition: width 0.25s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--white);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Menú móvil */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ──────────────────────────  Insignia "Abierto"  ──────────────────────── */
+.badge-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+}
+.badge-open .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.badge-open.is-open .dot {
+  background: var(--lime);
+  box-shadow: 0 0 0 4px rgba(163, 230, 53, 0.2);
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+.badge-open.is-open {
+  color: var(--lime);
+  border-color: rgba(163, 230, 53, 0.4);
+}
+.badge-open.is-closed .dot {
+  background: var(--orange);
+}
+.badge-open.is-closed {
+  color: var(--orange);
+  border-color: rgba(249, 115, 22, 0.4);
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ─────────────────────────────────  Hero  ─────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.75) 55%, rgba(10, 10, 10, 0.97) 100%),
+    radial-gradient(80% 60% at 50% 0%, rgba(163, 230, 53, 0.12), transparent 70%);
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: clamp(3rem, 9vw, 7rem);
+}
+
+/* ───────────────────────────────  Tarjetas  ───────────────────────────── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  border-color: rgba(163, 230, 53, 0.45);
+  box-shadow: 0 24px 50px -24px rgba(163, 230, 53, 0.25);
+}
+
+.icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(163, 230, 53, 0.16), rgba(249, 115, 22, 0.12));
+  border: 1px solid rgba(163, 230, 53, 0.25);
+  color: var(--lime);
+}
+.icon-chip svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* ─────────────────────────────  Galería  ──────────────────────────────── */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+}
+.gallery-item img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(10, 10, 10, 0.6));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Carga elegante de imágenes blur → nítido */
+.img-fade {
+  filter: blur(12px);
+  transform: scale(1.02);
+  transition: filter 0.6s ease, transform 0.6s ease;
+}
+.img-fade.loaded {
+  filter: blur(0);
+  transform: scale(1);
+}
+
+/* ───────────────────────────────  Estrellas  ──────────────────────────── */
+.stars {
+  color: var(--lime);
+  letter-spacing: 2px;
+}
+
+/* ──────────────────────────────  Acordeón FAQ  ─────────────────────────── */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--card);
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.4rem;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--white);
+  cursor: pointer;
+}
+.faq-question .chev {
+  transition: transform 0.3s ease;
+  color: var(--lime);
+  flex: 0 0 auto;
+}
+.faq-question[aria-expanded='true'] .chev {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  color: var(--muted);
+}
+.faq-answer > div {
+  padding: 0 1.4rem 1.25rem;
+}
+
+/* ─────────────────────────  Reveal al hacer scroll  ───────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+.reveal.is-visible {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ────────────────────  Barra de acción inferior (móvil)  ───────────────── */
+.action-bar {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: 45;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 0;
+  background: rgba(20, 20, 20, 0.96);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.action-bar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 0.6rem 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #e5e7eb;
+}
+.action-bar a svg {
+  width: 22px;
+  height: 22px;
+}
+.action-bar a.join {
+  background: var(--lime);
+  color: #0a0a0a;
+}
+.action-bar a.call {
+  color: var(--lime);
+}
+.action-bar a.wa {
+  color: #25d366;
+}
+@media (min-width: 1024px) {
+  .action-bar {
+    display: none;
+  }
+}
+
+/* ───────────────────────  Botones flotantes (escritorio)  ──────────────── */
+.fab-stack {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 45;
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+@media (min-width: 1024px) {
+  .fab-stack {
+    display: flex;
+  }
+}
+.fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.85rem;
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.7);
+  transition: transform 0.18s ease, box-shadow 0.25s ease;
+}
+.fab:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+.fab svg {
+  width: 20px;
+  height: 20px;
+}
+.fab-wa {
+  background: #25d366;
+  color: #0a0a0a;
+}
+.fab-join {
+  background: var(--lime);
+  color: #0a0a0a;
+}
+
+/* ─────────────────────────────────  Mapa  ─────────────────────────────── */
+.map-frame {
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  filter: grayscale(0.25) contrast(1.05);
+  transition: filter 0.4s ease;
+}
+.map-frame:hover {
+  filter: grayscale(0) contrast(1);
+}
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+}
+
+/* ───────────────────────────────  Footer  ─────────────────────────────── */
+.footer-link {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: var(--lime);
+}
+.admin-link {
+  color: #4b5563;
+  font-size: 0.78rem;
+  transition: color 0.2s ease;
+}
+.admin-link:hover {
+  color: var(--muted);
+}
+
+/* ──────────────────────────  Espacio barra móvil  ─────────────────────── */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 64px;
+  }
+}
+
+/* ───────────────────────────  Reduced motion  ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .img-fade {
+    filter: none;
+    transform: none;
+  }
+}
