@@ -14,9 +14,10 @@
   --bg: #0a0a0a;
   --coal: #141414;
   --card: #1f1f1f;
-  --lime: #a3e635;
-  --lime-dark: #84cc16;
-  --orange: #f97316;
+  --lime: #34c2ab;
+  --lime-dark: #1fa890;
+  --orange: #0e9e8a;
+  --grey: #9aa0a3;
   --white: #ffffff;
   --muted: #9ca3af;
   --border: rgba(255, 255, 255, 0.08);
@@ -128,7 +129,7 @@ h3,
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, var(--lime), var(--orange));
+  background: linear-gradient(100deg, var(--lime), #7dead7);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -155,7 +156,7 @@ h3,
 
 .divider-glow {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(163, 230, 53, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(52, 194, 171, 0.5), transparent);
 }
 
 /* ───────────────────────────────  Botones  ────────────────────────────── */
@@ -188,20 +189,20 @@ h3,
 .btn-primary {
   background: var(--lime);
   color: #0a0a0a;
-  box-shadow: 0 10px 30px -10px rgba(163, 230, 53, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(52, 194, 171, 0.6);
 }
 .btn-primary:hover {
-  background: #b6f24d;
-  box-shadow: 0 14px 38px -10px rgba(163, 230, 53, 0.7);
+  background: #48d3bb;
+  box-shadow: 0 14px 38px -10px rgba(52, 194, 171, 0.7);
 }
 
 .btn-orange {
   background: var(--orange);
   color: #0a0a0a;
-  box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.55);
+  box-shadow: 0 10px 30px -10px rgba(14, 158, 138, 0.55);
 }
 .btn-orange:hover {
-  background: #fb8a3c;
+  background: #16b39d;
 }
 
 .btn-ghost {
@@ -237,6 +238,79 @@ h3,
 }
 .btn-sheen:hover::after {
   left: 130%;
+}
+
+/* Botón sobre fondo claro (banda de oferta) */
+.btn-dark {
+  background: #0a0a0a;
+  color: var(--white);
+}
+.btn-dark:hover {
+  background: #1a1a1a;
+}
+
+/* ──────────────────────────  Oferta: Matrícula 0€  ─────────────────────── */
+.promo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.03em;
+  color: #0a0a0a;
+  background: var(--lime);
+  box-shadow: 0 8px 22px -10px rgba(52, 194, 171, 0.7);
+  transition: transform 0.18s ease, box-shadow 0.25s ease;
+}
+.promo-pill:hover {
+  transform: translateY(-1px);
+}
+
+.promo-band {
+  background: linear-gradient(120deg, var(--lime) 0%, var(--lime-dark) 100%);
+  color: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+.promo-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 120% at 85% 0%, rgba(255, 255, 255, 0.25), transparent 60%);
+  pointer-events: none;
+}
+.promo-amount {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3.5rem, 10vw, 6rem);
+  line-height: 0.85;
+  color: #0a0a0a;
+}
+.promo-badge {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #0a0a0a;
+  color: var(--lime);
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+.promo-title {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.promo-text {
+  margin-top: 0.5rem;
+  max-width: 42ch;
+  color: rgba(10, 10, 10, 0.78);
+  font-weight: 500;
 }
 
 /* ────────────────────────────────  Navbar  ────────────────────────────── */
@@ -334,19 +408,19 @@ h3,
 }
 .badge-open.is-open .dot {
   background: var(--lime);
-  box-shadow: 0 0 0 4px rgba(163, 230, 53, 0.2);
+  box-shadow: 0 0 0 4px rgba(52, 194, 171, 0.2);
   animation: pulse-soft 2s ease-in-out infinite;
 }
 .badge-open.is-open {
   color: var(--lime);
-  border-color: rgba(163, 230, 53, 0.4);
+  border-color: rgba(52, 194, 171, 0.4);
 }
 .badge-open.is-closed .dot {
-  background: var(--orange);
+  background: #f87171;
 }
 .badge-open.is-closed {
-  color: var(--orange);
-  border-color: rgba(249, 115, 22, 0.4);
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.4);
 }
 
 @keyframes pulse-soft {
@@ -366,6 +440,9 @@ h3,
   display: flex;
   align-items: center;
   overflow: hidden;
+  /* Deja libre la altura de la navbar fija para que el contenido del hero
+     (insignia "Abierto ahora", título…) no se solape con el logo/menú. */
+  padding-top: var(--navbar-h);
 }
 .hero__bg {
   position: absolute;
@@ -379,14 +456,14 @@ h3,
   inset: 0;
   z-index: 1;
   background: linear-gradient(180deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.75) 55%, rgba(10, 10, 10, 0.97) 100%),
-    radial-gradient(80% 60% at 50% 0%, rgba(163, 230, 53, 0.12), transparent 70%);
+    radial-gradient(80% 60% at 50% 0%, rgba(52, 194, 171, 0.12), transparent 70%);
 }
 .hero__content {
   position: relative;
   z-index: 2;
 }
 .hero h1 {
-  font-size: clamp(3rem, 9vw, 7rem);
+  font-size: clamp(2.5rem, 7vw, 5.25rem);
 }
 
 /* ───────────────────────────────  Tarjetas  ───────────────────────────── */
@@ -398,8 +475,8 @@ h3,
 }
 .card-hover:hover {
   transform: translateY(-6px);
-  border-color: rgba(163, 230, 53, 0.45);
-  box-shadow: 0 24px 50px -24px rgba(163, 230, 53, 0.25);
+  border-color: rgba(52, 194, 171, 0.45);
+  box-shadow: 0 24px 50px -24px rgba(52, 194, 171, 0.25);
 }
 
 .icon-chip {
@@ -409,8 +486,8 @@ h3,
   width: 56px;
   height: 56px;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(163, 230, 53, 0.16), rgba(249, 115, 22, 0.12));
-  border: 1px solid rgba(163, 230, 53, 0.25);
+  background: linear-gradient(135deg, rgba(52, 194, 171, 0.16), rgba(14, 158, 138, 0.12));
+  border: 1px solid rgba(52, 194, 171, 0.25);
   color: var(--lime);
 }
 .icon-chip svg {

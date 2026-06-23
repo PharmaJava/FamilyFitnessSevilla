@@ -260,6 +260,44 @@
       .join('');
   }
 
+  function renderPromo(c) {
+    var band = $('#promo');
+    var pill = $('[data-promo-pill]');
+    var p = c.promo || {};
+    var on = p.enabled !== false;
+    if (band) {
+      if (on) band.removeAttribute('hidden');
+      else band.setAttribute('hidden', '');
+    }
+    if (pill) pill.style.display = on ? '' : 'none';
+  }
+
+  function renderClasses(c) {
+    var grid = $('#classes-grid');
+    if (!grid) return;
+    var days = (c.classes && c.classes.days) || [];
+    grid.innerHTML = days
+      .map(function (d, i) {
+        var rows = (d.sessions || [])
+          .map(function (s) {
+            return (
+              '<li class="flex items-center justify-between gap-3 py-2 border-b border-white/5 last:border-0">' +
+              '<span class="font-heading text-brand-lime tabular-nums">' + esc(s.time) + '</span>' +
+              '<span class="text-gray-200">' + esc(s.name) + '</span>' +
+              '</li>'
+            );
+          })
+          .join('');
+        return (
+          '<div class="card card-hover p-6 reveal" style="--i:' + i + '">' +
+          '<h3 class="font-heading uppercase tracking-wide text-xl text-brand-lime">' + esc(d.days) + '</h3>' +
+          '<ul class="mt-3">' + rows + '</ul>' +
+          '</div>'
+        );
+      })
+      .join('');
+  }
+
   function renderFaq(c) {
     var list = $('#faq-list');
     if (!list) return;
@@ -681,6 +719,8 @@
     renderAbout(c);
     renderGallery(c);
     renderServices(c);
+    renderPromo(c);
+    renderClasses(c);
     renderWhy(c);
     renderTestimonials(c);
     renderFaq(c);

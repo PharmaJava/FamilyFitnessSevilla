@@ -1,12 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Family Fitness">
-  <defs>
-    <linearGradient id="ffg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#a3e635"/>
-      <stop offset="1" stop-color="#84cc16"/>
-    </linearGradient>
-  </defs>
-  <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#ffg)"/>
-  <g stroke="#0a0a0a" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 13v14M8 16v8M28 13v14M32 16v8M12 20h16"/>
+  <rect x="1" y="1" width="38" height="38" rx="11" fill="#0d0f0f" stroke="#34c2ab" stroke-opacity="0.5" stroke-width="1.5"/>
+  <!-- Mancuerna a dos tintas: discos en gris, barra/interior en teal (marca FF) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 16v8M32 16v8" stroke="#9aa0a3" stroke-width="2.6"/>
+    <path d="M12 13v14M28 13v14M12 20h16" stroke="#34c2ab" stroke-width="2.8"/>
   </g>
 </svg>

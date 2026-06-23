@@ -171,13 +171,60 @@ window.FF_CONFIG = {
     ],
   },
 
+  /* ──────────────────────────  Oferta destacada  ──────────────────────── */
+  // Promoción de matrícula 0€ (historia de Instagram). enabled=false la oculta.
+  promo: {
+    enabled: true,
+    badge: 'Oferta de por vida',
+    amount: '0€',
+    title: 'Por tu matrícula',
+    text: 'No pagues por dar el primer paso para hacer deporte. Apúntate sin matrícula y sin permanencia.',
+    cta: { label: '¡Apúntate ya!', href: '#contacto' },
+  },
+
+  /* ──────────────────────  Clases colectivas (horario)  ────────────────── */
+  classes: {
+    label: 'Clases colectivas',
+    title: 'Horario semanal',
+    subtitle: 'Reserva tu plaza: pilates, interval y body fitness incluidos en tu cuota.',
+    days: [
+      {
+        days: 'Lun · Mié',
+        sessions: [
+          { time: '08:30', name: 'Pilates' },
+          { time: '09:30', name: 'Pilates' },
+          { time: '10:30', name: 'Interval' },
+          { time: '19:00', name: 'Pilates' },
+          { time: '20:00', name: 'Interval' },
+        ],
+      },
+      {
+        days: 'Jueves',
+        sessions: [
+          { time: '18:00', name: 'Pilates' },
+          { time: '19:00', name: 'Body Fitness' },
+        ],
+      },
+      {
+        days: 'Viernes',
+        sessions: [
+          { time: '08:30', name: 'Pilates' },
+          { time: '09:30', name: 'Pilates' },
+          { time: '10:30', name: 'Body Fitness' },
+          { time: '11:30', name: 'Pilates' },
+        ],
+      },
+    ],
+  },
+
   /* ────────────────────────────  Contacto  ────────────────────────────── */
   contact: {
     title: 'Ven a conocernos',
     subtitle: 'Te esperamos en el centro de Sevilla.',
-    // Formulario opcional: si enabled=true se muestra. Conectable a Formspree/EmailJS.
+    // Formulario de contacto desactivado por petición del gimnasio
+    // (priorizamos teléfono / WhatsApp). Conectable a Formspree/EmailJS.
     form: {
-      enabled: true,
+      enabled: false,
       provider: 'formspree', // 'formspree' | 'emailjs' | ''
       action: '', // p.ej. https://formspree.io/f/xxxxxxx
     },

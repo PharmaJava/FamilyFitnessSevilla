@@ -121,7 +121,7 @@ select.input {
   color: #0a0a0a;
 }
 .abtn-lime:hover {
-  background: #b6f24d;
+  background: #48d3bb;
 }
 .abtn-ghost {
   background: transparent;
@@ -152,17 +152,17 @@ select.input {
 
 /* ────────────────────────────────  Dropzone  ──────────────────────────── */
 .dropzone {
-  border: 2px dashed rgba(163, 230, 53, 0.4);
+  border: 2px dashed rgba(52, 194, 171, 0.4);
   border-radius: 1rem;
   padding: 2rem 1rem;
   text-align: center;
   color: var(--muted);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
-  background: rgba(163, 230, 53, 0.03);
+  background: rgba(52, 194, 171, 0.03);
 }
 .dropzone.dragover {
-  background: rgba(163, 230, 53, 0.1);
+  background: rgba(52, 194, 171, 0.1);
   border-color: var(--lime);
   color: var(--white);
 }
