@@ -2,7 +2,7 @@
 <html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- ─────────────────────────  SEO local (Sevilla)  ───────────────────────── -->
     <title>Family Fitness | Gimnasio familiar en Sevilla (Nervión) · +34 años</title>
@@ -182,11 +182,11 @@
               </span>
             </div>
 
-            <!-- CTAs principales -->
-            <div class="mt-9 flex flex-wrap gap-3">
-              <a href="#contacto" class="btn btn-primary btn-sheen">Hazte Socio</a>
-              <a href="#servicios" class="btn btn-ghost">Ver Clases y Horarios</a>
-              <a href="#contacto" class="btn btn-orange btn-sheen">Reservar Entrenamiento Personal</a>
+            <!-- CTAs principales (mobile-first: primario a ancho completo en móvil) -->
+            <div class="mt-9 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+              <a href="#contacto" class="btn btn-primary btn-sheen w-full sm:w-auto justify-center">Hazte Socio</a>
+              <a href="#servicios" class="btn btn-ghost w-full sm:w-auto justify-center">Ver Clases y Horarios</a>
+              <a href="#contacto" class="btn btn-orange btn-sheen w-full sm:w-auto justify-center">Reservar Entrenamiento Personal</a>
             </div>
 
             <!-- Accesos rápidos -->
@@ -219,16 +219,16 @@
 
       <!-- ════════════════════════  OFERTA: MATRÍCULA 0€  ══════════════════ -->
       <section id="promo" class="promo-band reveal" hidden>
-        <div class="container-x py-12 lg:py-14 grid lg:grid-cols-[auto_1fr_auto] items-center gap-6 lg:gap-10">
-          <div class="flex items-end gap-2">
+        <div class="container-x py-12 lg:py-14 grid lg:grid-cols-[auto_1fr_auto] items-center gap-6 lg:gap-10 text-center lg:text-left">
+          <div class="flex items-end justify-center lg:justify-start gap-2">
             <span class="promo-amount" data-text="promo.amount">0€</span>
             <span class="promo-badge" data-text="promo.badge">Oferta de por vida</span>
           </div>
           <div>
             <h2 class="promo-title font-display" data-text="promo.title">por tu matrícula</h2>
-            <p class="promo-text" data-text="promo.text"></p>
+            <p class="promo-text mx-auto lg:mx-0" data-text="promo.text"></p>
           </div>
-          <a class="btn btn-dark btn-sheen shrink-0" data-href="promo.cta.href" href="#contacto">
+          <a class="btn btn-dark btn-sheen shrink-0 w-full sm:w-auto justify-center mx-auto lg:mx-0" data-href="promo.cta.href" href="#contacto">
             <span data-text="promo.cta.label">¡Apúntate ya!</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-5 h-5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
